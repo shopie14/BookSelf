@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf Apps</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="head_bar">
+      <h1 class="head_bar__title">Bookshelf Apps</h1>
+    </header>
+    <main>
+      <section class="input_section">
+        <h2>Insert New Book</h2>
+        <form id="inputBook">
+          <div class="input">
+            <label for="inputBookTitle">Title</label>
+            <input
+              id="inputBookTitle"
+              type="text"
+              placeholder="Book Title"
+              required
+            />
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Author</label>
+            <input
+              id="inputBookAuthor"
+              type="text"
+              placeholder="Book Author"
+              required
+            />
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Year of Publication</label>
+            <input
+              id="inputBookYear"
+              type="number"
+              placeholder="Year of Book Publication"
+              required
+            />
+          </div>
+          <div class="input_inline">
+            <input id="inputBookIsComplete" type="checkbox" />
+            <label for="inputBookIsComplete">Done Reading</label>
+          </div>
+          <button id="bookSubmit" type="submit">Add a Book</button>
+          <button id="bookEdit" type="submit">Edit a Book</button>
+        </form>
+      </section>
+
+      <section class="container-bookshelf">
+        <div class="search_section">
+          <form id="searchBook">
+            <input
+              id="searchBookTitle"
+              type="text"
+              placeholder="Cari Judul Buku..."
+              onkeyup="searchBookshelfList()"
+            />
+          </form>
+        </div>
+
+        <div class="book_shelf">
+          <h2>Not finished reading</h2>
+          <div id="incompleteBookshelfList" class="book_list"></div>
+        </div>
+
+        <div class="book_shelf">
+          <h2>Done Reading</h2>
+          <div id="completeBookshelfList" class="book_list"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="javascript/data.js" type="text/javascript"></script>
+    <script src="javascript/script.js" type="text/javascript"></script>
+    <script src="javascript/main.js" type="text/javascript"></script>
+  </body>
+</html>
